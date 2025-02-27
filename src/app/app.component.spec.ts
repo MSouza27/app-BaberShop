@@ -1,10 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { RouterOutlet } from '@angular/router';
+import { CardHeaderComponent } from './commons/components/card-header/card-header.component';
+import { MenuBarComponent } from './commons/components/menu-bar/menu-bar.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent],
+      imports: [AppComponent, RouterOutlet, CardHeaderComponent, MenuBarComponent],
     }).compileComponents();
   });
 

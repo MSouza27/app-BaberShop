@@ -32,7 +32,7 @@ export interface ListClientResponse {
   phone: string
 }
 
-export interface DatailClientResponse {
+export interface DetailClientResponse {
   id: number
   name: string
   email: string

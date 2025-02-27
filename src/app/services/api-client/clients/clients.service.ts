@@ -2,7 +2,7 @@ import { Update } from './../../../../../node_modules/@angular/build/node_module
 import { Injectable } from '@angular/core';
 import { ICLientService } from './iclients.service';
 import { Observable } from 'rxjs';
-import { SaveClientRequest, SaveClientResponse, UpdateClientRequest, UpdateClientResponse, ListClientResponse, DatailClientResponse } from './client.models';
+import { SaveClientRequest, SaveClientResponse, UpdateClientRequest, UpdateClientResponse, ListClientResponse, DetailClientResponse } from './client.models';
 import { HttpClient } from '@angular/common/http';
 import { envinronment } from '../../../../environments/environment';
 
@@ -27,7 +27,7 @@ export class ClientsService implements ICLientService{
   list(): Observable<ListClientResponse[]> {
     return this.http.get<ListClientResponse[]>(`${this.basePath}clients`)
   }
-  findById(id: number): Observable<DatailClientResponse> {
-    return this.http.get<DatailClientResponse>(`${this.basePath}clients${id}`)
+  findById(id: number): Observable<DetailClientResponse> {
+    return this.http.get<DetailClientResponse>(`${this.basePath}clients/${id}`)
   }
 }
