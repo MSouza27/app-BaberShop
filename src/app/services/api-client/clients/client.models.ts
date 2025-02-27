@@ -1,4 +1,3 @@
-import { Response } from './../../../../../node_modules/@types/express/node_modules/@types/express-serve-static-core/index.d';
 export interface SaveClientRequest {
   name: string
   email: string
